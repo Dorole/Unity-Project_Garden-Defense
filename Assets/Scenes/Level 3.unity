@@ -594,6 +594,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.data[1].size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
       propertyPath: pools.Array.data[0].parent
       value: 
       objectReference: {fileID: 175042116}
@@ -684,15 +688,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3776318775260769790, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3776318775263032221, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776318775429214326, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3776318776253050646, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154654704557353285, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
+      propertyPath: _maxSpawnDelay
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154654704557353285, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
+      propertyPath: _minSpawnDelay
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4154654704557353285, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
       propertyPath: _spawnableObjects.Array.size
@@ -899,11 +915,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1524612471, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: _baseStars
-      value: 200
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 1524612471, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: _starsModifier
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1818945188481680069, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: m_IsActive
@@ -996,11 +1012,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5789429645075640410, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
       propertyPath: _levelTime
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7846848619930981451, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
       propertyPath: m_Name
       value: MainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846848619930981453, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846848619930981455, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
       propertyPath: m_Pivot.x

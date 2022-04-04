@@ -35,6 +35,7 @@ namespace GardenDefense
 
                 PlayDeathEffect();
                 ObjectPooler.instance.ReturnToPool(gameObject.tag, gameObject);
+                _currentHealth = _maxHealth;
             }
         }
 

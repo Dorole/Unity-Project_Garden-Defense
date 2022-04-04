@@ -27,6 +27,13 @@ namespace GardenDefense
                 Time.timeScale = 1;
         }
 
+        private void Update()
+        {
+            //Debug purposes
+            if (Input.GetKey(KeyCode.R))
+                RestartLevel();
+        }
+
         public void LoadNextScene()
         {
             SceneManager.LoadScene(_currentSceneIndex + 1);
