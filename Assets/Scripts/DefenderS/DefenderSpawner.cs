@@ -20,7 +20,7 @@ namespace GardenDefense
             AttemptPlaceDefenderAt(GetSquareClicked());
         }
 
-        private void AttemptPlaceDefenderAt(Vector2 gridPos)
+        void AttemptPlaceDefenderAt(Vector2 gridPos)
         {
             int defenderCost = _defender.Cost;
 
