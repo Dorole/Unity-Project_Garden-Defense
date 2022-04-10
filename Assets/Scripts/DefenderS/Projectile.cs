@@ -22,6 +22,9 @@ namespace GardenDefense
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (gameObject.CompareTag("Axe") && collision.gameObject.CompareTag("Ghastly")) //other solutions?
+                return;
+
             IAttacker isAttacker = collision.GetComponent<IAttacker>();
             Health attackerHealth = collision.GetComponent<Health>();
 

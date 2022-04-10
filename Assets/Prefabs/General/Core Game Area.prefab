@@ -58,7 +58,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4927877845814267697
 MonoBehaviour:
@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 8127717479195823874}
   - component: {fileID: 8127717479195823875}
   - component: {fileID: 8127717479195823873}
+  - component: {fileID: 8127717480468721581}
   m_Layer: 6
   m_Name: Core Game Area
   m_TagString: Untagged
@@ -246,3 +247,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940ad68637d4cfc468d567cae18e345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8127717480468721581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127717479195823884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb9e1ac7f12aab4eba8dc1c4ed5630b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minX: 1
+  _maxX: 7
+  _minY: 1
+  _maxY: 5
+  _numberOfBlockers: 0
+  _blockingObject: {fileID: 2692484261436126144, guid: d4f9cea28aebe024ca96521f394bcf8a, type: 3}
