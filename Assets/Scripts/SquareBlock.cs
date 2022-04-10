@@ -12,11 +12,18 @@ namespace GardenDefense
         [SerializeField] int _numberOfBlockers = 3;
         [SerializeField] GameObject _blockingObject;
 
+        List<Vector2> _randomPositionsList = new List<Vector2>();
+
         private void Start()
         {
             for (int i = 0; i < _numberOfBlockers; i++)
             {
                 Vector2 newRandomPos = GetRandomPosition();
+
+                while (_randomPositionsList.Contains(newRandomPos))
+                    newRandomPos = GetRandomPosition();
+
+                _randomPositionsList.Add(newRandomPos);
                 SpawnBlocker(newRandomPos);
             }
         }
