@@ -8,7 +8,8 @@ namespace GardenDefense
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.GetComponent<Defender>())
+            if (collision.gameObject.GetComponent<Defender>()
+                && !collision.gameObject.CompareTag("Scarecrow"))
             {
                 GetComponent<AttackerMovement>().Attack(collision.gameObject);
             }

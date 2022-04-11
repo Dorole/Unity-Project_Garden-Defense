@@ -332,19 +332,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 644917240, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -352,19 +352,19 @@ PrefabInstance:
       objectReference: {fileID: 130124688}
     - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 760
       objectReference: {fileID: 0}
     - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 961917180, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -460,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7717646041255721526, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
@@ -529,6 +529,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.data[8].tag
+      value: Scarecrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.data[8].size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
       propertyPath: pools.Array.data[0].parent
       value: 
       objectReference: {fileID: 175042116}
@@ -560,6 +572,14 @@ PrefabInstance:
       propertyPath: pools.Array.data[7].parent
       value: 
       objectReference: {fileID: 23238072}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.data[8].parent
+      value: 
+      objectReference: {fileID: 5807986841096490841}
+    - target: {fileID: 2707485995330918208, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
+      propertyPath: pools.Array.data[8].prefab
+      value: 
+      objectReference: {fileID: 1089754876064877664, guid: f7a24e612b8fa0644ad8ad6146d7a9a8, type: 3}
     - target: {fileID: 2707485995330918209, guid: 553c52625303b8a43a52cf5a187ea0c3, type: 3}
       propertyPath: m_Name
       value: ObjectPooler
@@ -755,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4672484052175603701, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3da3d7426432e344294d775b4ebc1a60, type: 3}
@@ -873,6 +893,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3afade6b23505cd41b07b9ced4188c6f, type: 3}
+--- !u!4 &5807986841096490841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1531703919362209252, guid: 3afade6b23505cd41b07b9ced4188c6f, type: 3}
+  m_PrefabInstance: {fileID: 5807986841096490840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6244470386334286406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -880,18 +905,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1524612471, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
-      propertyPath: _baseStars
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524612471, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
-      propertyPath: _starsModifier
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6244470385631439258, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6244470386827143370, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: m_Name
       value: ButtonsCanvas
@@ -939,10 +952,6 @@ PrefabInstance:
     - target: {fileID: 6244470386827143371, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7856513049223714510, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
@@ -1166,5 +1175,5 @@ MonoBehaviour:
   _maxX: 7
   _minY: 1
   _maxY: 5
-  _numberOfBlockers: 3
+  _numberOfBlockers: 0
   _blockingObject: {fileID: 2692484261436126144, guid: d4f9cea28aebe024ca96521f394bcf8a, type: 3}

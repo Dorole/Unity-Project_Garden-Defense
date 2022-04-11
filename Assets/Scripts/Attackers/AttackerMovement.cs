@@ -7,10 +7,16 @@ namespace GardenDefense
         float _currentSpeed = 1f;
         GameObject _currentTarget;
         Animator _animator;
+        bool _wasRepelled;
 
         private void Start()
         {
             _animator = GetComponent<Animator>();
+        }
+
+        private void OnEnable()
+        {
+            Repellent.onRepellerReached += MoveBackwards;
         }
 
         void Update()
@@ -26,6 +32,12 @@ namespace GardenDefense
 
         private void OnBecameInvisible()
         {
+            if (_wasRepelled)
+            {
+                transform.localScale = new Vector2(1, 1);
+                _wasRepelled = false;
+            }
+
             ObjectPooler.instance.ReturnToPool(gameObject.tag, gameObject);
         }
 
@@ -49,6 +61,18 @@ namespace GardenDefense
             Health health = _currentTarget.GetComponent<Health>();
             if (health)
                 health.HandleDamage(damage);
+        }
+
+        void MoveBackwards()
+        {
+            _animator.SetTrigger("RepellentReached");
+            transform.localScale = new Vector2(-1, 1);
+            _wasRepelled = true;
+        }
+
+        private void OnDisable()
+        {
+            Repellent.onRepellerReached -= MoveBackwards;
         }
     }
 }

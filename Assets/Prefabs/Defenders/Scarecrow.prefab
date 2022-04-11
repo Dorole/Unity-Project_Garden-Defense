@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1089754876064877671}
   - component: {fileID: 1089754876064877670}
   - component: {fileID: 4243921502828880445}
+  - component: {fileID: 2680277356937517416}
   m_Layer: 0
   m_Name: Scarecrow
   m_TagString: Scarecrow
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1089754876064877664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.9213285, y: 3.114765, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1089754876823834166}
   m_Father: {fileID: 0}
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312a6826bdfd8204cb2e181076576b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cost: 150
+  _cost: 500
 --- !u!114 &4243921502828880445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +109,18 @@ MonoBehaviour:
   _maxHealth: 100000000
   _effect: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
   _starsReward: 0
+--- !u!114 &2680277356937517416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089754876064877664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7635e24364398bf47a3a1eacd11f484c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1089754876823834161
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089754876823834161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1089754876064877669}

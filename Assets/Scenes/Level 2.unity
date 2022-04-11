@@ -844,7 +844,15 @@ PrefabInstance:
       propertyPath: _starsModifier
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 723781259777142929, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1818945188481680069, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304659626235571505, guid: c75e180faf06aaf43a18b28a119e9637, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

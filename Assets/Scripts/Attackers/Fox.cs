@@ -11,7 +11,8 @@ namespace GardenDefense
             if (collision.gameObject.CompareTag("Gravestone"))
                 GetComponent<Animator>().SetTrigger("JumpTrigger");
 
-            else if (collision.gameObject.GetComponent<Defender>())
+            else if (collision.gameObject.GetComponent<Defender>()
+                     && !collision.gameObject.CompareTag("Scarecrow"))
                 GetComponent<AttackerMovement>().Attack(collision.gameObject);
         }
     }
