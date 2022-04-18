@@ -13,7 +13,7 @@ namespace GardenDefense
 
             else if (collision.gameObject.GetComponent<Defender>()
                      && !collision.gameObject.CompareTag("Scarecrow"))
-                GetComponent<AttackerMovement>().Attack(collision.gameObject);
+                GetComponent<Attack>().HandleAttack(collision.gameObject);
         }
     }
 }

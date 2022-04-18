@@ -15,6 +15,7 @@ TagManager:
   - Lizard
   - Ghastly
   - Scarecrow
+  - Golem
   layers:
   - Default
   - TransparentFX
