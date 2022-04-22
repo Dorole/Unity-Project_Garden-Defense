@@ -44,5 +44,10 @@ namespace GardenDefense
                 button.GetComponent<SpriteRenderer>().color = _inactiveColor;
             }
         }
+
+        private void OnDisable()
+        {
+            CountdownTimer.onCountdownFinished -= EnableCollider;
+        }
     }
 }

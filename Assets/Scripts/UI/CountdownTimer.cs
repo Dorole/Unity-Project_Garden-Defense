@@ -14,10 +14,12 @@ namespace GardenDefense
         [SerializeField] string _startText = "Go!";
 
 
-        private void Awake()
+        private void Start()
         {
-            StartCoroutine(CO_CountdownToStart());
+            LevelLoader.onLevelFadeIn += StartCountdown;
         }
+
+        void StartCountdown() => StartCoroutine(CO_CountdownToStart());
 
         IEnumerator CO_CountdownToStart()
         {
@@ -33,6 +35,11 @@ namespace GardenDefense
             gameObject.SetActive(false);
 
             onCountdownFinished?.Invoke();
+        }
+
+        private void OnDisable()
+        {
+            LevelLoader.onLevelFadeIn -= StartCountdown;
         }
     }
 }

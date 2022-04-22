@@ -479,6 +479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartDelay
       objectReference: {fileID: 0}
+    - target: {fileID: 1722493411003849080, guid: c95685f960e0169408bb634f3412cdfb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722493411003849082, guid: c95685f960e0169408bb634f3412cdfb, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -813,7 +817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693367299905630194, guid: 3e9cd231e5f60504bbae1515af519627, type: 3}
       propertyPath: m_Name
-      value: LevelManager
+      value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693367299905630194, guid: 3e9cd231e5f60504bbae1515af519627, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e9cd231e5f60504bbae1515af519627, type: 3}

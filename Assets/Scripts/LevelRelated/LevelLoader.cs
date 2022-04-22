@@ -7,10 +7,17 @@ namespace GardenDefense
     public class LevelLoader : MonoBehaviour
     {
         public static event Action onGameLoaded;
-        //public static event Action onMenuLoaded;
+        public static event Action onLevelFadeIn;
 
         [SerializeField] float _delay = 3;
+        [SerializeField] Animator _animator;
         int _currentSceneIndex;
+        int _levelToLoad;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
 
         private void Start()
         {
@@ -21,10 +28,8 @@ namespace GardenDefense
 
             if (_currentSceneIndex == 2)
                 onGameLoaded?.Invoke();
-            //else if (_currentSceneIndex == 1)
-            //    onMenuLoaded?.Invoke();
 
-                Time.timeScale = 1;
+            Time.timeScale = 1;
         }
 
         private void Update()
@@ -36,29 +41,26 @@ namespace GardenDefense
 
         public void LoadNextScene()
         {
-            SceneManager.LoadScene(_currentSceneIndex + 1);
+            int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+            FadeToLevel(nextLevel);
         }
 
-        public void LoadMainMenu()
+        public void LoadMainMenu() => FadeToLevel(1);
+
+        public void LoadOptionsScreen() => FadeToLevel(SceneManager.sceneCountInBuildSettings - 1);
+
+        public void RestartLevel() => FadeToLevel(_currentSceneIndex);
+
+        public void Quit() => Application.Quit();
+
+        private void FadeToLevel(int levelIndex)
         {
-            SceneManager.LoadScene("MainMenu");
-
+            _levelToLoad = levelIndex;
+            _animator.SetTrigger("FadeOut");
         }
 
-        public void LoadOptionsScreen()
-        {
-            SceneManager.LoadScene("OptionsScreen");
-        }
+        public void LoadLevel() => SceneManager.LoadScene(_levelToLoad);
 
-        public void RestartLevel()
-        {
-            SceneManager.LoadScene(_currentSceneIndex);
-        }
-
-        public void Quit()
-        {
-//add for editor
-            Application.Quit();
-        }
+        public void FadeInEnded() => onLevelFadeIn?.Invoke();
     }
 }

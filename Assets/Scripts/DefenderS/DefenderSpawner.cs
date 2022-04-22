@@ -70,5 +70,10 @@ namespace GardenDefense
             }
             ObjectPooler.instance.SpawnFromPool(_defender.tag, spawnPoint, Quaternion.identity);
         }
+
+        private void OnDisable()
+        {
+            CountdownTimer.onCountdownFinished -= EnableCollider;
+        }
     }
 }

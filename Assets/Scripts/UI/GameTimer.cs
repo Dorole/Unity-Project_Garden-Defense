@@ -44,6 +44,11 @@ namespace GardenDefense
 
             _timerFinished = _startTime >= _levelTime;
         }
-        
+
+        private void OnDisable()
+        {
+            CountdownTimer.onCountdownFinished -= ActivateTimer;
+        }
+
     }
 }

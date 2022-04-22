@@ -52,6 +52,7 @@ namespace GardenDefense
 
         private void OnDisable()
         {
+            CountdownTimer.onCountdownFinished -= StartSpawningAttackers;
             GameTimer.onTimerExpired -= StopSpawningAttackers;
         }
     }
