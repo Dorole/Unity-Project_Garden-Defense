@@ -9,11 +9,21 @@ namespace GardenDefense
 
         Defender _defender;
         StarsDisplay _starsDisplay;
+        BoxCollider2D _collider;
 
         private void Start()
         {
             _starsDisplay = FindObjectOfType<StarsDisplay>();
+
+            if (FindObjectOfType<CountdownTimer>())
+            {
+                _collider = GetComponent<BoxCollider2D>();
+                _collider.enabled = false;
+                CountdownTimer.onCountdownFinished += EnableCollider;
+            }
         }
+
+        void EnableCollider() => _collider.enabled = true;
 
         private void OnMouseDown()
         {

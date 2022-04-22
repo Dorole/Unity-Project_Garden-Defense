@@ -6,24 +6,44 @@ namespace GardenDefense
 {
     public class GameTimer : MonoBehaviour
     {
-        public static event Action onTimerExpired; //potencijalno zaustavi animaciju
+        public static event Action onTimerExpired;
 
         [Tooltip("Level timer in seconds")]
         [SerializeField] float _levelTime = 30f;
+
+        float _startTime;
+        bool _shouldWait = true;
         bool _timerFinished;
+
+        private void Start()
+        {
+            if (!FindObjectOfType<CountdownTimer>()) //Debug only
+                _shouldWait = false;
+            else
+                CountdownTimer.onCountdownFinished += ActivateTimer;
+
+            GetComponent<Slider>().value = 0;
+        }
 
         private void Update()
         {
-            if (_timerFinished)
-                return;
+            if (_timerFinished || _shouldWait) return;
 
-            GetComponent<Slider>().value = Time.timeSinceLevelLoad / _levelTime;
-            _timerFinished = (Time.timeSinceLevelLoad >= _levelTime);
+            DecreaseTimer();
 
             if (_timerFinished)
-            {
                 onTimerExpired?.Invoke();
-            }
         }
+
+        void ActivateTimer() => _shouldWait = false;
+
+        void DecreaseTimer()
+        {
+            _startTime += Time.deltaTime;
+            GetComponent<Slider>().value = _startTime / _levelTime;
+
+            _timerFinished = _startTime >= _levelTime;
+        }
+        
     }
 }

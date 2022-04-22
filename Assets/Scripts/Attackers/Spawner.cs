@@ -13,8 +13,17 @@ namespace GardenDefense
 
         private void Start()
         {
-            _spawningCO = StartCoroutine(CO_SpawnAttacker());
+            if (!FindObjectOfType<CountdownTimer>()) //Debug only
+                StartSpawningAttackers();
+            else
+                CountdownTimer.onCountdownFinished += StartSpawningAttackers;
+
             GameTimer.onTimerExpired += StopSpawningAttackers;
+        }
+
+        void StartSpawningAttackers()
+        {
+            _spawningCO = StartCoroutine(CO_SpawnAttacker());
         }
 
         IEnumerator CO_SpawnAttacker()

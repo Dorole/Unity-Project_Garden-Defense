@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GardenDefense
@@ -12,13 +10,24 @@ namespace GardenDefense
 
         [SerializeField] Defender _defender;
         DefenderSpawner _spawner;
+        BoxCollider2D _collider;
 
         private void Start()
         {
             _renderer = GetComponent<SpriteRenderer>();
             _renderer.color = _inactiveColor;
+
             _spawner = FindObjectOfType<DefenderSpawner>();
+
+            if (FindObjectOfType<CountdownTimer>()) 
+            {
+                _collider = GetComponent<BoxCollider2D>();
+                _collider.enabled = false;
+                CountdownTimer.onCountdownFinished += EnableCollider;
+            }    
         }
+
+        void EnableCollider() => _collider.enabled = true;
 
         private void OnMouseDown()
         {
