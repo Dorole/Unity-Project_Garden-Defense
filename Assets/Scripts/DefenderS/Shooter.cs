@@ -11,6 +11,8 @@ namespace GardenDefense
         Spawner _thisLaneSpawner;
         [SerializeField] GameObject _projectile;
         Animator _anim; //consider another class
+        
+        bool _golemDeployed;
 
         private void Start()
         {
@@ -18,10 +20,16 @@ namespace GardenDefense
             _attackerSpawners = FindObjectsOfType<Spawner>();
             _anim = GetComponent<Animator>();
             SetLaneSpawner();
+
+            Golem.onGolemDeployed += ShootAtBoss;
+            Golem.onGolemDestroyed += StopShooting;
         }
 
         private void Update()
         {
+            if (_golemDeployed)
+                return;
+
             if (IsAttackerInLane())
                 _anim.SetBool("IsAttacking", true);
             else
@@ -50,5 +58,16 @@ namespace GardenDefense
 
             return _thisLaneSpawner.gameObject.GetComponentsInChildren<AttackerMovement>().GetLength(0) >= 1;
         }
+
+        private void ShootAtBoss()
+        {
+            _golemDeployed = true;
+            _anim.SetBool("IsAttacking", true);
+        }
+
+        private void StopShooting()
+        {
+            _anim.SetBool("IsAttacking", false);
+        }    
     }
 }

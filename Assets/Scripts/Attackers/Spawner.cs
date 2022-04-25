@@ -19,6 +19,7 @@ namespace GardenDefense
                 CountdownTimer.onCountdownFinished += StartSpawningAttackers;
 
             GameTimer.onTimerExpired += StopSpawningAttackers;
+            Golem.onGolemDeployed += StopSpawningAttackers;
         }
 
         void StartSpawningAttackers()
@@ -54,6 +55,7 @@ namespace GardenDefense
         {
             CountdownTimer.onCountdownFinished -= StartSpawningAttackers;
             GameTimer.onTimerExpired -= StopSpawningAttackers;
+            Golem.onGolemDeployed -= StopSpawningAttackers;
         }
     }
 }

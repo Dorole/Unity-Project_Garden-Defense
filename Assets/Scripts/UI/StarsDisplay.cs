@@ -19,6 +19,7 @@ namespace GardenDefense
             DefenderSpawner.onDefenderPurchased += SpendStars;
             Defender.onStarsProduced += AddStars;
             Health.onEnemyKilled += AddStars;
+            Golem.onGolemAttack += DepleteStars;
         }
 
         private void SetStartingStarsAmount()
@@ -48,7 +49,7 @@ namespace GardenDefense
 
         public void SpendStars(int amount)
         {
-            if (_stars >= amount && _stars-amount >= 0)
+            if (_stars >= amount && (_stars - amount) >= 0)
             {
                 _stars -= amount;
                 UpdateDisplay();
@@ -62,11 +63,22 @@ namespace GardenDefense
             _starsText.text = _stars.ToString(); 
         }
 
+        private void DepleteStars(int amount)
+        {
+            _stars -= amount;
+
+            if ((_stars - amount) < 0)
+                _stars = 0;
+
+            UpdateDisplay();
+        }    
+
         private void OnDisable()
         {
             DefenderSpawner.onDefenderPurchased -= SpendStars;
             Defender.onStarsProduced -= AddStars;
             Health.onEnemyKilled -= AddStars;
+            Golem.onGolemAttack -= DepleteStars;
         }
     }
 }

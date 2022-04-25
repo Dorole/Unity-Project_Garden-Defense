@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3834517410186256073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3834517410673876276}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3834517410673876276}
   - component: {fileID: 3834517410673876277}
   - component: {fileID: 3834517410673876278}
-  - component: {fileID: 3834517410673876275}
+  - component: {fileID: 3614472508059122635}
   - component: {fileID: 3834517410673876279}
   - component: {fileID: 3834517410673876280}
   - component: {fileID: 3834517410673876281}
@@ -192,8 +192,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &3834517410673876275
-CapsuleCollider2D:
+--- !u!60 &3614472508059122635
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -205,9 +205,28 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.093375444, y: 0.94967055}
-  m_Size: {x: 1.0617766, y: 1.6152797}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.2, y: 1.5}
+      - {x: 0, y: 2.4}
+      - {x: -0.1836319, y: 2.4986448}
+      - {x: -0.49192238, y: 2.2475543}
+      - {x: -0.77867174, y: 1.4650307}
+      - {x: -1.7666459, y: 1.1144109}
+      - {x: -1.7703896, y: -1.0740836}
+      - {x: -1.1975198, y: -1.8553905}
+      - {x: 0.8120724, y: -1.8692824}
+      - {x: 0.8287182, y: 0.3701865}
 --- !u!50 &3834517410673876279
 Rigidbody2D:
   serializedVersion: 4
@@ -241,6 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c6a32e376ab894392db579b2ebf3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wasRepelled: 0
 --- !u!114 &3834517410673876281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,9 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7f4866daa16a74fb7d7b13c521ee56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 50
+  _maxHealth: 10000
   _effect: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
-  _starsReward: 50
+  _starsReward: 150
 --- !u!114 &3834517410673876282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025ee7faca5008342b04b0e725a808c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 10001
+  _starsDepleted: 100
 --- !u!1001 &3834517410425768793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,7 +312,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5016643845618111024, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016643845618111024, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 6176835969346880953, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
       propertyPath: m_Name
@@ -370,11 +396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7025268652382038638, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.228
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 7025268652382038638, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.047
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7025268652382038638, guid: 6d12c738f73b0f641a056d8343d72a81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

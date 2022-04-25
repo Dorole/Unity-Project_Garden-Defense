@@ -1,21 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace GardenDefense
 {
-    public class Golem : MonoBehaviour
+    public class Golem : MonoBehaviour, IAttacker
     {
-        // Start is called before the first frame update
-        void Start()
+        public static event Action<int> onGolemAttack;
+        public static event Action onGolemDeployed;
+        public static event Action onGolemDestroyed;
+
+        [SerializeField] int _damage = 999;
+        [SerializeField] int _starsDepleted = 100;
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-        
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (health)
+                health.HandleDamage(_damage);
+
+            onGolemAttack?.Invoke(_starsDepleted);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnBecameVisible()
         {
-        
+            onGolemDeployed?.Invoke();
+        }
+
+        private void OnBecameInvisible()
+        {
+            onGolemDestroyed?.Invoke();
         }
     }
 }
