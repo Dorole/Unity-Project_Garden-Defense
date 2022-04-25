@@ -11,6 +11,8 @@ namespace GardenDefense
 
         [SerializeField] float _delay = 3;
         [SerializeField] Animator _animator;
+        
+        [SerializeField] int _mainMenuIndex = 1;
         int _currentSceneIndex;
         int _levelToLoad;
 
@@ -44,23 +46,20 @@ namespace GardenDefense
             int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
             FadeToLevel(nextLevel);
         }
-
-        public void LoadMainMenu() => FadeToLevel(1);
-
-        public void LoadOptionsScreen() => FadeToLevel(SceneManager.sceneCountInBuildSettings - 1);
-
-        public void RestartLevel() => FadeToLevel(_currentSceneIndex);
-
-        public void Quit() => Application.Quit();
-
-        private void FadeToLevel(int levelIndex)
+        public void FadeToLevel(int levelIndex)
         {
             _levelToLoad = levelIndex;
             _animator.SetTrigger("FadeOut");
         }
-
         public void LoadLevel() => SceneManager.LoadScene(_levelToLoad);
 
+        public void RestartLevel() => FadeToLevel(_currentSceneIndex);
+        
         public void FadeInEnded() => onLevelFadeIn?.Invoke();
+
+        public void Quit() => Application.Quit();
+
+        public void LoadMainMenu() => FadeToLevel(_mainMenuIndex);
+
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GardenDefense
 {
-    public class MainMenu : MonoBehaviour
+    public class MainMenuUI : MonoBehaviour
     {
         [SerializeField] GameObject _aboutPanel;
         [SerializeField] GameObject _buttonGroup;
