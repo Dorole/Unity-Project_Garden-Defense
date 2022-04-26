@@ -66,6 +66,12 @@ namespace GardenDefense
         private void StopShooting()
         {
             _anim.SetBool("IsAttacking", false);
-        }    
+        }
+
+        private void OnDisable()
+        {
+            Golem.onGolemDeployed -= ShootAtBoss;
+            Golem.onGolemDestroyed -= StopShooting;
+        }
     }
 }

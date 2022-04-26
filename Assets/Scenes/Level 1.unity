@@ -382,42 +382,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 644917239, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 644917240, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 130124688}
-    - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 961917179, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 961917180, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -509,10 +477,6 @@ PrefabInstance:
     - target: {fileID: 7717646041255721526, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
       propertyPath: m_Name
       value: LevelOverCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7717646041255721526, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01fffcdda0df2a646809507696f8b79b, type: 3}
@@ -1008,6 +972,10 @@ PrefabInstance:
     - target: {fileID: 7846848619930981451, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
       propertyPath: m_Name
       value: MainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846848619930981453, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846848619930981455, guid: 628f135bf45553f4c8fbb33b588898f0, type: 3}
       propertyPath: m_Pivot.x

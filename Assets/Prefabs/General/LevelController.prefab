@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _delay: 3.5
   _animator: {fileID: 0}
+  _mainMenuIndex: 1
 --- !u!114 &1097104534529674481
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ namespace GardenDefense
 {
     public class LevelEndDisplay : MonoBehaviour
     {
-        [SerializeField] GameObject _winText;
         [SerializeField] GameObject _losePanel;
         
         Animator _anim;
@@ -12,13 +11,12 @@ namespace GardenDefense
 
         private void Awake()
         {
-            _winText.SetActive(false);
             _losePanel.SetActive(false);
         }
 
         private void Start()
         {
-            _anim = _winText.GetComponent<Animator>();
+            _anim = GetComponent<Animator>();
             _buttonBlock = GetComponent<BoxCollider2D>();
             _buttonBlock.enabled = false;
 
@@ -29,7 +27,6 @@ namespace GardenDefense
         void DisplayWinText()
         {
             _buttonBlock.enabled = true;
-            _winText.SetActive(true);
             _anim.SetTrigger("LevelComplete");
         }
 
@@ -39,6 +36,8 @@ namespace GardenDefense
             _losePanel.SetActive(true);
             Time.timeScale = 0;
         }
+
+        public void OnLevelCompleteAnimationEnded() => FindObjectOfType<LevelLoader>().LoadNextScene();
 
         private void OnDisable()
         {

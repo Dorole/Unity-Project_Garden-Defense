@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GardenDefense
@@ -8,6 +6,7 @@ namespace GardenDefense
     {
         const string MASTER_VOLUME_KEY = "Master volume";
         const string DIFFICULTY_KEY = "Difficulty";
+        const string UNLOCK_LEVEL_KEY = "Unlock level";
 
         const float MIN_VOLUME = 0f;
         const float MAX_VOLUME = 1f;
@@ -55,6 +54,21 @@ namespace GardenDefense
         public static bool CheckForDifficultyKey()
         {
             return PlayerPrefs.HasKey(DIFFICULTY_KEY);
+        }
+
+        public static void SetLevelToUnlock(int index)
+        {
+            PlayerPrefs.SetInt(UNLOCK_LEVEL_KEY, index);
+        }
+
+        public static int GetLevelToUnlock()
+        {
+            return PlayerPrefs.GetInt(UNLOCK_LEVEL_KEY);
+        }
+
+        public static bool CheckForUnlockLevelKey()
+        {
+            return PlayerPrefs.HasKey(UNLOCK_LEVEL_KEY);
         }
     }
 }

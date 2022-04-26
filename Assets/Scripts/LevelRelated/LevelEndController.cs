@@ -9,9 +9,11 @@ namespace GardenDefense
         public static event Action onLevelEnded;
 
         int _activeAttackersNum;
+        LevelLoader _levelLoader;
 
         private void Start()
         {
+            _levelLoader = FindObjectOfType<LevelLoader>();
             GameTimer.onTimerExpired += StartCountingDownAttackers;
         }
 
@@ -35,8 +37,10 @@ namespace GardenDefense
                 yield return new WaitForSeconds(1);
 
             } while (_activeAttackersNum > 0);
+
             Debug.Log("Level ended");
             onLevelEnded?.Invoke();
+            PlayerPrefsController.SetLevelToUnlock(_levelLoader.CurrentSceneIndex + 1);
         }
 
         private void OnDisable()

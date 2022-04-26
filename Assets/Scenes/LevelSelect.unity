@@ -1317,37 +1317,9 @@ PrefabInstance:
       value: LevelButton (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1688944596}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GardenDefense.LevelSelector, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
 --- !u!114 &1194507157 stripped
@@ -3066,41 +3038,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1750584668133623147, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.59278214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750584668133623147, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.64463973
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750584668133623147, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7264151
+      objectReference: {fileID: 0}
     - target: {fileID: 5189620288456170094, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
       propertyPath: m_Name
       value: LevelButton
       objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+    - target: {fileID: 5786018394178972648, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
+      propertyPath: m_fontColor.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+    - target: {fileID: 5786018394178972648, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1688944596}
     - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GardenDefense.LevelSelector, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185963317695360932, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8cd49f4e6901ef41907789bee31633b, type: 3}

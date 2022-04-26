@@ -14,7 +14,8 @@ namespace GardenDefense
         
         [SerializeField] int _mainMenuIndex = 1;
         int _currentSceneIndex;
-        int _levelToLoad;
+        int _levelToLoad;        
+        public int CurrentSceneIndex => _currentSceneIndex;
 
         private void Awake()
         {
