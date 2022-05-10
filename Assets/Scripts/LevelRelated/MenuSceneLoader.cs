@@ -8,6 +8,7 @@ namespace GardenDefense
         LevelLoader _loader;
         [SerializeField] int _optionsSceneIndex;
         [SerializeField] int _levelSelectionSceneIndex;
+        [SerializeField] int _firstLevelIndex;
 
         private void Start()
         {
@@ -17,5 +18,11 @@ namespace GardenDefense
         public void LoadOptionsScreen() => _loader.FadeToLevel(_optionsSceneIndex);
 
         public void LoadSelectionScreen() => _loader.FadeToLevel(_levelSelectionSceneIndex);
+
+        public void StartNewGame()
+        {
+            PlayerPrefsController.SetLevelToUnlock(_firstLevelIndex);
+            _loader.FadeToLevel(_firstLevelIndex);
+        }
     }
 }

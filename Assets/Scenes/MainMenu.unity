@@ -375,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _optionsSceneIndex: 12
   _levelSelectionSceneIndex: 13
+  _firstLevelIndex: 2
 --- !u!4 &1055387489
 Transform:
   m_ObjectHideFlags: 0
@@ -600,7 +601,15 @@ PrefabInstance:
     - target: {fileID: 502004374255569255, guid: e25dffae831366c4f9ed6556399838f9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 837473606}
+      objectReference: {fileID: 1055387488}
+    - target: {fileID: 502004374255569255, guid: e25dffae831366c4f9ed6556399838f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartNewGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 502004374255569255, guid: e25dffae831366c4f9ed6556399838f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GardenDefense.MenuSceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 502004374255569256, guid: e25dffae831366c4f9ed6556399838f9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

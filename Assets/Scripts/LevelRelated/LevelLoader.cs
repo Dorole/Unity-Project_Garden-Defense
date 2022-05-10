@@ -10,7 +10,7 @@ namespace GardenDefense
         public static event Action onLevelFadeIn;
 
         [SerializeField] float _delay = 3;
-        [SerializeField] Animator _animator;
+        Animator _animator;
         
         [SerializeField] int _mainMenuIndex = 1;
         int _currentSceneIndex;
@@ -52,6 +52,7 @@ namespace GardenDefense
             _levelToLoad = levelIndex;
             _animator.SetTrigger("FadeOut");
         }
+
         public void LoadLevel() => SceneManager.LoadScene(_levelToLoad);
 
         public void RestartLevel() => FadeToLevel(_currentSceneIndex);
