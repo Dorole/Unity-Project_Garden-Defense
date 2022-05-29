@@ -19,3 +19,9 @@ Cactus (low cost, shoots off mushrooms), Trophy (low cost, generates stars, can'
 
 List of attackers: 
 Lizard (slow, medium health, has to destroy any defender in its way before moving on), Fox (fast, low health, can jump over tombstones), Ghastly (medium speed, can pass through anything, can only be killed by cacti), Golem (slow, high health, deals a lot of damage, can destroy scarecrows).
+
+![Snimka zaslona (4)](https://user-images.githubusercontent.com/35565194/170889264-852f21fd-67b7-49d2-bf90-d11bdbd5f2ad.png)
+
+![Snimka zaslona (5)](https://user-images.githubusercontent.com/35565194/170889274-76fbaddd-368d-4961-b101-21f2955b5285.png)
+
+![Snimka zaslona (7)](https://user-images.githubusercontent.com/35565194/170889279-35b91a14-4095-4d73-949b-1e89f84340f0.png)
