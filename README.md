@@ -22,7 +22,7 @@ Tombstone | Medium | Stops lizards until destroyed | None
 Gnome | Medium | Shoots off axes | High
 Scarecrow | High | Scares off lizards and foxes | None
 
-### List of defenders: 
+### List of attackers: 
 Type | Health | Feature 
 ------------ | ------------- | -------------
 Lizard | Medium | Has to destroy any defender in its way before moving on
